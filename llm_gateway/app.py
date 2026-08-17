@@ -12,6 +12,12 @@ from pathlib import Path
 from typing import Optional, Tuple
 import os
 
+try:
+    import spaces
+    HAS_SPACES = True
+except ImportError:
+    HAS_SPACES = False
+
 # Color palette (Vellum.ai/Linear/Stripe style)
 COLORS = {
     "primary": "#2563EB",
@@ -410,6 +416,12 @@ def create_dashboard():
         )
 
     return dashboard
+
+
+if HAS_SPACES:
+    @spaces.GPU
+    def gpu_function():
+        pass
 
 
 if __name__ == "__main__":
