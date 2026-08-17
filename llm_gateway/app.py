@@ -356,7 +356,7 @@ def get_quality_by_tier_chart() -> go.Figure:
 
 def create_dashboard():
     """Create production-grade dashboard"""
-    with gr.Blocks(title="LLM Gateway Dashboard", theme=gr.themes.Base(primary_hue="blue", secondary_hue="green")) as dashboard:
+    with gr.Blocks(title="LLM Gateway Dashboard") as dashboard:
         # Status banner
         status_text, status_color = get_status_banner()
         gr.HTML(
@@ -419,4 +419,5 @@ if __name__ == "__main__":
         server_port=7860,
         share=False,
         show_error=True,
+        theme=gr.themes.Base(primary_hue="blue", secondary_hue="green")
     )
