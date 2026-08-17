@@ -1,0 +1,4 @@
+gradio>=4.0.0
+plotly>=5.17.0
+structlog>=23.1.0
+python-dotenv>=1.0.0
